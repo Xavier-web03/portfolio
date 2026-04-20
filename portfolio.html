@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Xavier</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background: #0a0a0a;
+            color: white;
+        }
+
+        header{
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 50px;
+        }
+
+        .logo{
+            color: #ff2e63;
+        }
+
+        nav a{
+            margin: 0 15px;
+            text-decoration: none;
+            color: white;
+            transition: 0,3s;
+        }
+
+        nav a:hover{
+            color: #ff2e63;
+        }
+
+        .hero{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 90vh;
+            padding: 0 50px;
+        }
+
+        .image{
+            position: relative;
+        }
+
+        .image img{
+            width: 300px;
+            border-radius: 50%;
+            z-index: 2;
+            position: relative;
+        }
+
+        .image::before{
+            content: "";
+            position: absolute;
+            width: 320px;
+            height: 320px;
+            background: #ff2e63;
+            border-radius: 50%;
+            top: -10px;
+            left: -10px;
+            z-index: 1;
+            filter: blur(20px);
+        }
+
+        .content{
+            margin-left: 60px;
+            max-width: 500px;
+        }
+
+        .content h1 span{
+            color: #ff2e63;
+        }
+        .content h2{
+            margin: 10px 0;
+            
+        }
+        .content p{
+            margin: 15px 0;
+            color: aquamarine;
+        }
+
+        .socials a{
+            margin-right: 10px;
+            color: #ff2e63;
+            border: 1px solid #ff2e63;
+            padding: 8px;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: 0,3s;
+        }
+
+        .socials a:hover{
+            background: #ff2e63;
+            color: black;
+        }
+
+        button{
+            margin-top: 20px;
+            padding: 10px 25px;
+            border: none;
+            background: #ff2e63;
+            color: white;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: 0,3s;
+        }
+
+        button:hover{
+            background: white;
+            color: #ff2e63;
+        }
+
+        @media (max-width:992px){
+            .hero{
+                flex-direction: column;
+                text-align: center;
+            }
+            .content{
+                margin-left: 0;
+                margin-top: 30px;
+            }
+        }
+
+        @media (max-width:768px){
+            header{
+                padding: 20px;
+            }
+            .menu-toggle{
+                display: block;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <header>
+        <h2 class="logo">Xavier</h2>
+        <nav>
+            <a href="services.html">services</a>
+            <a href="experiences.html">experiences</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+
+    <section class="hero">
+     <div class="image">
+       <img src="c:\Users\Xavier\OneDrive\Pictures\Screenshots\WhatsApp Image 2026-04-14 at 10.13.31 (1).jpeg" alt="">
+     </div>
+
+     <div class="content">
+        <h1>Salut, C'est <span>Xavier</span></h1>
+        <h2>Je suis Developpeur</h2>
+        <p>Titulaire d'un bac+2 en Informatique Genie Logiciel; Ayant des notions
+            sur les langages de base tel que HTML,CSS, JavaScript... 
+        Capable de concevoir des sites web moderne, et creer des bases de données.</p>
+
+          <div class="socials">
+            <a href="https://wa.me/2250508872306">whatssap</a>
+            <a href="https://www.facebook.com/rayan.smith.504618">facebook</a>
+            <a href="https://www.tiktok.com/@rayannsmith225?_r=1&_t=ZS-95cgNvGP6s4">tik tok</a>
+          </div>
+
+          <button onclick="window.location.href='formulaire.html'">Me Contacter</button>
+
+
+     </div>
+    </section>
+
+    <script>
+        const toggle =document.getElementById("menu-toggle");
+        const nav = document.getElementById("nav");
+
+        toggle.onclick = () => {
+            nav.classList.toggle("active");
+        };
+    </script>
+
+</body>
+</html>
